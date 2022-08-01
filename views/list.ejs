@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="box" id="heading">
+        <h1><%= listTitle %></h1>
+    </div>
+
+    <div class="box">
+        <% for (let i=0; i < addedItem.length; i++) { %>
+            <div class="item">
+                <input type="checkbox" name="" id="">
+                <p>
+                    <%= addedItem[i] %>
+                </p>
+            </div>
+            <%}%>
+
+                <form action="/" method="post">
+                    <input type="text" name="newItem" id="list-item" placeholder="New Item" autocomplete="off">
+                    <button type="submit" name="list" value=<%= listTitle %>>+</button>
+                </form>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
